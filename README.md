@@ -1,4 +1,4 @@
-# COS341
+# COS314
 University of Pretoria module COS314 (Artificial intelligence).
 
 The main objective of this module is to introduce a selection of topics from artificial intelligence (AI), and to provide the student with the background to implement AI techniques for solving complex problems.
