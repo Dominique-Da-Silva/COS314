@@ -1,0 +1,44 @@
+1BPP => 1D bin packaging problem
+We have 5 folders
+	Falkenauer
+		Falkenauer_T
+		Falkenauer_T
+	Hard28
+	Scholl
+		Scholl_1
+		Scholl_2
+		Scholl_3
+	Schwerin
+		Schwerin_1
+		Schwerin_2
+	Waescher
+
+Each folder contains an unknown number of textfiles.
+The textfiles have the following format:
+	<total number of items (n)>
+	<bin capacity (c)>
+	<item 1 size>
+	<item 2 size>
+	<item 3 size>
+	.
+	.
+	.
+	<item n size>
+The goal is to find the minimum number of bins required to pack all the items such that the total size of the items in each bin does not exceed the bin capacity (c).
+The known optimal value or solution for the minimum number of bins are given in a excel spreadsheet.
+You have to complete this method in two different ways:
+	A Java program that uses Iterated Local Search to solve all the instanced of the problem contained for each dataset.
+	A Java program that uses Tabu Search Algorithm to solve all the instanced of the problem contained for each dataset.
+The use of libraries are strictly prohibited.
+
+
+Hints:
+To apply Tabu search to 1-dimensional bin packing, you need to define a set of candidate solutions that represent different ways of packing the items into the bins. 
+One possible approach is to use a greedy algorithm to pack the items into the bins, and then use Tabu search to refine the solution by exploring the neighborhood of the initial solution. 
+The neighborhood of a solution can be defined as the set of all possible solutions that can be obtained by making a single modification to the initial solution, such as swapping two items between two bins or moving an item from one bin to another. 
+The Tabu list can be used to keep track of the recent moves and prevent the algorithm from making the same move twice.
+
+In the context of 1-dimensional bin packing, you can use Iterated Local Search by first generating an initial solution, for example, using a simple heuristic such as the first-fit or best-fit algorithm. 
+You can then apply a perturbation operator to the solution, for example, by randomly removing items from the bins and then reinserting them in a different order. 
+After the perturbation, you can use local search to optimize the solution by making small local moves, such as swapping two items between bins or shifting an item within a bin. 
+The process of perturbation and local search is repeated for a fixed number of iterations or until a stopping criterion is met.
